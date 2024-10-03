@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Inspection</title>
+  <style>
+    body {
+      background-color: aliceblue;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: royalblue;
+      font-size: 3rem;
+      font-family: 'Times New Roman', sans-serif;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    h2 {
+      font-weight: 500;
+    }
+
+    .quiz {
+      margin: 20px;
+      text-align: left;
+      width: 40%;
+      margin-left: 25%;
+      border: 2px solid black;
+
+    }
+
+    .question {
+      font-size: 18px;
+      font-weight: normal;
+      text-align: left;
+      margin: 20px;
+    }
+
+    .answer {
+      font-size: 16px;
+      font-weight: normal;
+      text-align: left;
+      margin: 20px;
+    }
+    #clickMe{
+        color: aliceblue;
+        background-color: rgb(54, 52, 48);
+        height: 45px;
+        width: 70%;
+        border-radius: 40px;
+        margin-left: 0%;
+    }
+
+    #clickMe:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+    input{
+        margin-left: 5%;
+    }
+    .container{
+        padding: 0;
+        margin-left: 20%;
+        
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Inspect Me</h1>
+  <h2>This is an simple website to learn how to do CSS Inspection</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+    viverra euismod odio, gravida pellentesque urna varius vitae.
+    Suspendisse potenti. Morbi commodo, ipsum in blandit hendrerit,
+    velit enim ornare nisi, eget consequat libero libero eu libero.
+    Donec varius, sem eget ornare commodo, quam libero pretium
+    libero, euismod blandit mauris nunc in magna.
+  </p>
+  <hr />
+  <div class="quiz">
+    <div class="container">
+    <div class="question">
+      Q.1 What is the named color of the body?
+    </div>
+    <div class="answer">
+      <input type="text" id="answer1">
+      <p id="result1"></p>
+    </div>
+    <div class="question">
+      Q.2 What is the font size of the h1?
+    </div>
+    <div class="answer">
+      <input type="text" id="answer2">
+      <p id="result2"></p>
+    </div>
+    <div class="question">
+      Q.3 What is the font weight of the h2?
+    </div>
+    <div class="answer">
+      <input type="text" id="answer3">
+      <p id="result3"></p>
+    </div>
+    <div class="question">
+      Q.4 What is the font family of the p?
+    </div>
+    <div class="answer">
+      <input type="text" id="answer4">
+      <p id="result4"></p>
+    </div>
+
+    <div class="overallScore">
+        <button id="clickMe" onclick="overall()">Check Score</button>
+        <p id="score"></p>
+    </div>
+</div>
+  </div>
+</body>
+<script>
+    
+
+    
+/*
+  function checkAnswer1() {
+    var answer1 = document.getElementById("answer1").value;
+    if (answer1.toLowerCase() === "aliceblue" || answer1.toLowerCase() === "alice blue") {
+      document.getElementById("result1").innerHTML = "Correct!";
+      calculate++;
+      
+    } else {
+      document.getElementById("result1").innerHTML = "Incorrect. Try again.";
+    }
+  }
+  function checkAnswer2() {
+    var answer2 = document.getElementById("answer2").value;
+    if (answer2.toLowerCase() === "3rem" || answer2.toLowerCase() === "3 rem") {
+      document.getElementById("result2").innerHTML = "Correct!";
+      calculate++;
+    } else {
+      document.getElementById("result2").innerHTML = "Incorrect. Try again.";
+    }
+  }
+  function checkAnswer3() {
+    var answer3 = document.getElementById("answer3").value;
+    if (answer3.toLowerCase() === "500") {
+      document.getElementById("result3").innerHTML = "Correct!";
+      calculate++;
+    } else {
+      document.getElementById("result3").innerHTML = "Incorrect. Try again.";
+    }
+  }
+  function checkAnswer4() {
+    var answer4 = document.getElementById("answer4").value;
+    if (answer4.toLowerCase() === "arial" || answer4.toLowerCase() === "arial, sans-serif" || answer4.toLowerCase() === "sans-serif" || answer4.toLowerCase() === "sans serif") {
+      document.getElementById("result4").innerHTML = "Correct!";
+      calculate++;
+    } else {
+      document.getElementById("result4").innerHTML = "Incorrect. Try again.";
+    }
+
+    31 OCTOBER 1992
+
+}*/
+
+var calculate=0;
+function overall(){
+
+    calculate=0;
+    
+
+    
+    var answer1 = document.getElementById("answer1").value;
+    var answer2 = document.getElementById("answer2").value;
+    var answer3 = document.getElementById("answer3").value;
+    var answer4 = document.getElementById("answer4").value;
+    
+    if ((answer1 == null || answer1 == "") || (answer2 == null || answer2 == "") || (answer3 == null || answer3 == "") || (answer4 == null || answer4 == "")) {
+      alert("Please Fill In All Required Fields");
+      return;
+
+    }
+    else{
+
+        
+     if (answer1.toLowerCase() === "aliceblue" || answer1.toLowerCase() === "alice blue") {
+      document.getElementById("result1").innerHTML = "Correct!";
+      calculate++;
+      
+    } else {
+      document.getElementById("result1").innerHTML = "Incorrect. Try again.";
+    }
+
+
+    
+    if (answer2.toLowerCase() === "3rem" || answer2.toLowerCase() === "3 rem") {
+      document.getElementById("result2").innerHTML = "Correct!";
+      calculate++;
+      
+    } else {
+      document.getElementById("result2").innerHTML = "Incorrect. Try again.";
+    }
+
+    
+    if (answer3.toLowerCase() === "500") {
+      document.getElementById("result3").innerHTML = "Correct!";
+      calculate++;
+    } else {
+      document.getElementById("result3").innerHTML = "Incorrect. Try again.";
+    }
+
+    
+    if (answer4.toLowerCase() === "arial" || answer4.toLowerCase() === "arial, sans-serif" || answer4.toLowerCase() === "sans-serif" || answer4.toLowerCase() === "sans serif") {
+      document.getElementById("result4").innerHTML = "Correct!";
+      calculate++;
+    } else {
+      document.getElementById("result4").innerHTML = "Incorrect. Try again.";
+    }
+
+        alert('Your total score is ' + calculate);
+    }   
+        
+        
+    }
+  
+</script>
+
+</html>
